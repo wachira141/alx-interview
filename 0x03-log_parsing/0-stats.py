@@ -59,7 +59,7 @@ def print_result(status_code_list, file_size):
     '''
     print the status code list
     '''
-    print('File size: {}'.format(file_size),flush=True)
+    print('File size: {}'.format(file_size), flush=True)
     for k, v in status_code_list.items():
         print('{}: {}'.format(k, v), flush=True)
 
