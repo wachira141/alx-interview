@@ -68,7 +68,7 @@ def regex_parser(log_input):
     '''
     check if the line of log parsed
     '''
-    reg_format = (
+    rex = (
         r'\s*(?P<ip>\S+)\s*',
         r'\s*\[(?P<date>\d+\-\d+\-\d+ \d+:\d+:\d+\.\d+)\]',
         r'\s*"(?P<method>[^"]*)"\s*',
@@ -76,7 +76,7 @@ def regex_parser(log_input):
         r'\s*(?P<file_size>\d+)')
 
     formated_log = '{} - {}{}{}{}\\s*'\
-        .format(reg_format[0], reg_format[1], reg_format[2], reg_format[3], reg_format[4])
+        .format(rex[0], rex[1], rex[2], rex[3], rex[4])
     resp_match = re.fullmatch(formated_log, log_input)
 
     data = {
