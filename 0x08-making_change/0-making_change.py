@@ -7,7 +7,7 @@ def making_change(arr: List, amount: int) -> int:
     count = 0
 
     result = rec_change(sorted(arr), total, amount,index, count)
-    print(result)
+    return result
 
 
 
