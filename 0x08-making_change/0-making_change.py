@@ -2,7 +2,7 @@
 from typing import List
 
 
-def making_change(arr: List, amount: int) -> int:
+def makeChange(arr: List, amount: int) -> int:
     total = arr[len(arr) - 1]
     index = len(arr) - 1
     count = 0
@@ -31,4 +31,4 @@ def rec_change(arr, total, amount, index, count):
         return rec_change(arr, total, amount, index, count)
 
 
-making_change([1256, 54, 48, 16, 102], 1453)
+makeChange([1256, 54, 48, 16, 102], 1453)
