@@ -1,8 +1,18 @@
 #!/usr/bin/env python3
+'''
+making change
+makeChange: function
+@coins - an array of coins
+@total - the total amount
+'''
 from typing import List
 
 
 def makeChange(arr: List, amount: int) -> int:
+    '''
+    makeChange - function to pile coins of
+    different values
+    '''
     total = arr[len(arr) - 1]
     index = len(arr) - 1
     count = 0
@@ -12,6 +22,12 @@ def makeChange(arr: List, amount: int) -> int:
 
 
 def rec_change(arr, total, amount, index, count):
+    '''
+    a recursive function to sum num of coins
+    '''
+    if amount == 0:
+        return 0
+
     if index < 0:
         return - 1
 
